@@ -1,18 +1,18 @@
 
 
-function AdministraCitas() {
+function AdministraCitas(props) {
   return (
     <div class="one-half column">
     <h2>Administra tus citas</h2>
     <div class="cita">
-      <p>Mascota: <span>Blacky</span></p>
+      <p>Mascota: <span>{props.name}</span></p>
       <p>Dueño: <span>Jere</span></p>
       <p>Fecha: <span>2023-05-08</span></p>
       <p>Hora: <span>16:15</span></p>
       <p>Sintomas: <span>No está comiendo</span></p><button class="button elimnar u-full-width">Eliminar ×</button>
     </div>
     <div class="cita">
-      <p>Mascota: <span>Nina</span></p>
+      <p>Mascota: <span>{props.name}</span></p>
       <p>Dueño: <span>Martin</span></p>
       <p>Fecha: <span>2021-08-05</span></p>
       <p>Hora: <span>08:20</span></p>
