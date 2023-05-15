@@ -2,7 +2,6 @@
 
 function CreacionCita() {
   return (
-  <div>
     <div class="one-half column">
       <h2>Crear mi Cita</h2>
       <form>
@@ -22,7 +21,6 @@ function CreacionCita() {
         <button type="submit"
         class="u-full-width button-primary">Agregar Cita</button></form>
     </div>
-  </div>
       );
 }
 
