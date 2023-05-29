@@ -2,11 +2,12 @@ import React from "react";
 
 const CreacionCita = (props) => {
   
- /* const cita1 = {Mascota:"Blacky", Dueño:"Jere", Fecha:"2023-05-08", Hora:"16:15", Sintomas:"No está comiendo"}*/
+ /* const cita = {Mascota:"Blacky", Dueño:"Jere", Fecha:"2023-05-08", Hora:"16:15", Sintomas:"No está comiendo"}*/
 
   const crearCita = () => {
-    const cita = {Mascota: document.getElementsByName(mascota).value, Dueño: document.getElementsByName(dueño).value, Fecha: document.getElementsByName(fecha).value, Hora: document.getElementsByName(hora).value, Sintomas: document.getElementsByName(sintomas).value}
+    const cita = {Mascota: document.getElementById("mascota").value, Dueño: document.getElementById("dueño").value, Fecha: document.getElementById("fecha").value, Hora: document.getElementById("hora").value, Sintomas: document.getElementById("sintomas").value}
     const nuevaCita = props.citas
+    console.log(nuevaCita, cita)
     nuevaCita.push(cita)
     props.setCitas(nuevaCita)
   }
@@ -17,20 +18,20 @@ const CreacionCita = (props) => {
       <div>
         
         <label>Nombre Mascota</label>
-        <input type="text" name="mascota" class="u-full-width" placeholder="Nombre Mascota"
-        value=""></input>
+        <input type="text" id="mascota" class="u-full-width" placeholder="Nombre Mascota"
+        ></input>
         <label>Nombre Dueño</label>
-        <input type="text" name="dueño" class="u-full-width"
-        placeholder="Nombre dueño de la mascota" value=""></input>
-        <label>Fecha</label><input type="date" name="fecha"
-        class="u-full-width" value=""></input>
+        <input type="text" id="dueño" class="u-full-width"
+        placeholder="Nombre dueño de la mascota" ></input>
+        <label>Fecha</label><input type="date" id="fecha"
+        class="u-full-width" ></input>
         <label>hora</label>
-        <input type="time" name="hora" class="u-full-width"
-        value=""></input>
+        <input type="time" id="hora" class="u-full-width"
+        ></input>
         <label>Sintomas</label>
-        <textarea name="sintomas" class="u-full-width"></textarea>
+        <textarea id="sintomas" class="u-full-width"></textarea>
         <button type="button"
-        class="u-full-width button-primary" onclick={crearCita}>Agregar Cita</button></div>
+        class="u-full-width button-primary" onClick={crearCita}>Agregar Cita</button></div>
     </div>
       );
 }
