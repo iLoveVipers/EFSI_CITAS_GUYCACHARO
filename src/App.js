@@ -7,9 +7,10 @@ import React, { useEffect, useState } from "react";
 
 function App() {
   const [citas, setCitas] = useState([]);
+  console.log(citas)
   return (<div class="container">
     <Titulo/><div class="row">
-      <CreacionCita citas={citas} setCitas={setCitas}/>
+      <CreacionCita setCitas={setCitas}/>
       <AdministraCitas citas={citas} setCitas={setCitas}/>
       </div>
       </div>) 

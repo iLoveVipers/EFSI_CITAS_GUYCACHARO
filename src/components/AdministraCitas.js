@@ -9,9 +9,7 @@ function AdministraCitas(props) {
   return (
     <div class="one-half column">
     <h2>Administra tus citas</h2>
-    {props.citas.forEach(element => {
-      <Cita element={props.citas}/>//???
-    })}
+    {props.citas.map((cita, i) => <Cita {...cita} key={i}/>)}
       
   </div>
   );

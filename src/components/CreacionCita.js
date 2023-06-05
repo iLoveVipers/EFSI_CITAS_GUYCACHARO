@@ -4,13 +4,7 @@ const CreacionCita = (props) => {
   
  /* const cita = {Mascota:"Blacky", Dueño:"Jere", Fecha:"2023-05-08", Hora:"16:15", Sintomas:"No está comiendo"}*/
 
-  const crearCita = () => {
-    const cita = {Mascota: document.getElementById("mascota").value, Dueño: document.getElementById("dueño").value, Fecha: document.getElementById("fecha").value, Hora: document.getElementById("hora").value, Sintomas: document.getElementById("sintomas").value}
-    const nuevaCita = props.citas
-    console.log(nuevaCita, cita)
-    nuevaCita.push(cita)
-    props.setCitas(nuevaCita)
-  }
+ 
   
   return (
     <div class="one-half column">
@@ -31,10 +25,9 @@ const CreacionCita = (props) => {
         <label>Sintomas</label>
         <textarea id="sintomas" class="u-full-width"></textarea>
         <button type="button"
-        class="u-full-width button-primary" onClick={crearCita}>Agregar Cita</button></div>
+        class="u-full-width button-primary" onClick={()=>props.setCitas((prev)=>[...prev, {Mascota: document.getElementById("mascota").value, Dueño: document.getElementById("dueño").value, Fecha: document.getElementById("fecha").value, Hora: document.getElementById("hora").value, Sintomas: document.getElementById("sintomas").value}])}>Agregar Cita</button></div>
     </div>
       );
 }
-
 
       export default CreacionCita;
